@@ -11,12 +11,12 @@ function ShaadiForm() {
 
     try {
       setSubmitState('submitting')
-      const url = new URL('https://project4-back.vercel.app/api/gg')
-      Object.entries(payload).forEach(([key, value]) => {
-        url.searchParams.set(key, value)
-      })
-      const response = await fetch(url.toString(), {
-        method: 'GET',
+      const response = await fetch('https://project4-back.vercel.app/api/gg', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
       })
 
       if (!response.ok) {
