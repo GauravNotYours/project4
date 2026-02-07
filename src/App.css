@@ -24,6 +24,7 @@
   gap: 0.6rem;
   font-weight: 700;
   letter-spacing: 0.02em;
+  color: inherit;
 }
 
 .brand-mark {
@@ -51,12 +52,17 @@
   align-items: center;
 }
 
-.nav-links a {
+.nav-links a:not(.nav-cta) {
   color: var(--ink);
   opacity: 0.8;
 }
 
-.nav-links a:hover {
+.nav-links a:not(.nav-cta):hover {
+  opacity: 1;
+}
+
+.nav-links .nav-cta {
+  color: var(--bg);
   opacity: 1;
 }
 
@@ -311,6 +317,129 @@
   color: var(--muted);
 }
 
+.form-page {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+}
+
+.form-header {
+  max-width: 640px;
+}
+
+.form-header h2 {
+  font-family: var(--display);
+  font-size: clamp(2.1rem, 3.2vw, 3rem);
+  margin: 0.4rem 0 0.8rem;
+}
+
+.form-sub {
+  color: var(--muted);
+}
+
+.form-card {
+  background: #fff;
+  padding: 2.2rem;
+  border-radius: 24px;
+  box-shadow: 0 24px 60px rgba(33, 30, 26, 0.12);
+}
+
+.shaadi-form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form-section {
+  display: grid;
+  gap: 1.2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(31, 30, 26, 0.08);
+}
+
+.form-section:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.form-section-title h3 {
+  margin: 0 0 0.35rem;
+  font-family: var(--display);
+  font-size: 1.4rem;
+}
+
+.form-section-title p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.form-field span {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  border: 1px solid rgba(31, 30, 26, 0.2);
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  font-family: inherit;
+  background: #fffaf7;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-field.full {
+  grid-column: 1 / -1;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.radio-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(31, 30, 26, 0.2);
+  background: #fffaf7;
+  font-weight: 600;
+}
+
+.radio-option input {
+  accent-color: var(--accent);
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-note {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .cta {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
@@ -404,10 +533,6 @@
     text-align: center;
   }
 
-  .nav-cta {
-    display: none;
-  }
-
   .hero,
   .cta {
     grid-template-columns: 1fr;
@@ -475,6 +600,14 @@
   .results-grid,
   .testimonial-grid {
     grid-template-columns: 1fr;
+  }
+
+  .form-card {
+    padding: 1.5rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
   }
 
   .cta-form {
