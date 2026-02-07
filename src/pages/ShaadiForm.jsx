@@ -1,18 +1,59 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 function ShaadiForm() {
+  const [submitState, setSubmitState] = useState('idle')
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    const formData = new FormData(event.currentTarget)
+    const payload = Object.fromEntries(formData.entries())
+
+    try {
+      setSubmitState('submitting')
+      const response = await fetch('https://project4-back.vercel.app/gg', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      })
+
+      if (!response.ok) {
+        throw new Error(`Request failed: ${response.status}`)
+      }
+      setSubmitState('success')
+    } catch (error) {
+      console.error('Failed to submit form', error)
+      setSubmitState('error')
+    }
+  }
+
   return (
     <section className="section form-page">
-      <div className="form-header">
-        <p className="eyebrow">Book a Shaadi</p>
-        <h2>Tell us about you and your plan</h2>
-        <p className="form-sub">
-          Share the details and our team will reach out with a safe, private plan within 24 hours.
-        </p>
-      </div>
+      {submitState === 'success' ? (
+        <div className="form-card">
+          <div className="form-header">
+            <p className="eyebrow">Request received</p>
+            <h2>Your request is submitted</h2>
+            <p className="form-sub">We will reach you soon.</p>
+          </div>
+          <div className="form-actions">
+            <Link className="primary" to="/">Back to home</Link>
+          </div>
+        </div>
+      ) : (
+      <>
+        <div className="form-header">
+          <p className="eyebrow">Book a Shaadi</p>
+          <h2>Tell us about you and your plan</h2>
+          <p className="form-sub">
+            Share the details and our team will reach out with a safe, private plan within 24 hours.
+          </p>
+        </div>
 
-      <div className="form-card">
-        <form className="shaadi-form">
+        <div className="form-card">
+          <form className="shaadi-form" onSubmit={handleSubmit}>
           <section className="form-section">
             <div className="form-section-title">
               <h3>Your details</h3>
@@ -131,17 +172,26 @@ function ShaadiForm() {
                   <span>No</span>
                 </label>
               </div>
+              <p className="form-note">We charge some extra charges for Honeymoon plan</p>
             </div>
           </section>
 
           <div className="form-actions">
-            <button className="primary" type="submit">Submit request</button>
+            <button className="primary" type="submit" disabled={submitState === 'submitting'}>
+              {submitState === 'submitting' ? 'Submitting...' : 'Submit request'}
+            </button>
             <Link className="ghost" to="/">Back to home</Link>
           </div>
 
+          {submitState === 'error' && (
+            <p className="form-note">Sorry, something went wrong. Please try again.</p>
+          )}
+
           <p className="form-note">We keep your information private and never share it without consent.</p>
-        </form>
-      </div>
+          </form>
+        </div>
+      </>
+      )}
     </section>
   )
 }

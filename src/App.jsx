@@ -61,7 +61,7 @@ function SiteLayout() {
           <Link to="/#process">Process</Link>
           <Link to="/#work">Results</Link>
         </div>
-        <div className="footer-note">(c) 2026 GauravNotYours. All rights are not reserved.</div>
+        <div className="footer-note">(c) 2026 GauravNotYours email: gauravnotyours@gmail.com . All rights are not reserved.</div>
       </footer>
     </div>
   )
