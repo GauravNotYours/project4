@@ -11,7 +11,7 @@ function ShaadiForm() {
 
     try {
       setSubmitState('submitting')
-      const response = await fetch('https://project4-back.vercel.app/gg', {
+      const response = await fetch('https://project4-back.vercel.app/api/gg', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
