@@ -128,7 +128,7 @@ function Home() {
       <section className="section testimonials">
         <div className="section-title">
           <p className="eyebrow">Client Love</p>
-          <h2>Trusted by many couple</h2>
+          <h2>Trusted by many couples</h2>
         </div>
         <div className="testimonial-grid">
           <blockquote>

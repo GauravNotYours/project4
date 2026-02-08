@@ -11,7 +11,7 @@ function ShaadiForm() {
 
     try {
       setSubmitState('submitting')
-      const response = await fetch('https://project4-back.vercel.app/api/gg', {
+      const response = await fetch('http://localhost:3000/api/gg', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -84,9 +84,9 @@ function ShaadiForm() {
                 <span>Family financial and power status</span>
                 <select name="familyStatus" defaultValue="" required>
                   <option value="" disabled>Select one</option>
-                  <option value="classic">Weak</option>
-                  <option value="secure">Strong</option>
-                  <option value="premium">Powerful</option>
+                  <option value="weak">Weak</option>
+                  <option value="strong">Strong</option>
+                  <option value="powerful">Powerful</option>
                 </select>
               </label>
             </div>
@@ -122,9 +122,9 @@ function ShaadiForm() {
                 <span>Partner's Family financial and power status</span>
                 <select name="partnerFamilyStatus" defaultValue="" required>
                   <option value="" disabled>Select one</option>
-                  <option value="classic">Weak</option>
-                  <option value="secure">Strong</option>
-                  <option value="premium">Powerful</option>
+                  <option value="weak">Weak</option>
+                  <option value="strong">Strong</option>
+                  <option value="powerful">Powerful</option>
                 </select>
               </label>
             </div>
