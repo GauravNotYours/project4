@@ -1,16 +1,55 @@
-# React + Vite
+# 💍 RunningShaadi.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> 🚨 **Disclaimer:** This website is created **only for experimental and fun purposes**. It is not intended for real-world legal or professional use.
 
-Currently, two official plugins are available:
+> **Love finds a way. We help it run faster.**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+RunningShaadi.com is a modern wedding planning platform built for couples who choose love fearlessly.  
+Whether you're planning a private ceremony, seeking legal guidance, or organizing a beautiful celebration — we provide the tools and support to make your journey smooth and stress-free.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🌟 About The Project
 
-## Expanding the ESLint configuration
+RunningShaadi.com helps couples:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 💑 Plan weddings seamlessly
+- 🏃‍♂️ Get assistance for elopement
+- 📜 Understand marriage registration procedures
+- 🏛️ Access legal documentation guidance
+- 🎉 Organize intimate or grand ceremonies
+
+Our mission is simple:  
+**To empower couples with clarity, privacy, and confidence as they begin their forever.**
+
+---
+
+## ✨ Features
+
+- 📅 Smart wedding planning checklist
+- 📍 Venue & vendor discovery
+- ⚖️ Legal marriage support guidance
+- 🔐 Privacy-focused assistance
+- 💬 Consultation request form
+- 🎊 Customizable wedding packages
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** HTML5, CSS3, JavaScript  
+- **Backend:** Node.js + Express  
+- **Database:** (Optional) MongoDB / MySQL  
+- **Deployment:** Vercel / AWS / Render  
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/your-username/RunningShaadi.com.git
+```
+
+###
