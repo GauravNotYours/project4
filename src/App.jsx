@@ -32,7 +32,7 @@ function SiteLayout() {
           <Link to="/#services" onClick={() => setMenuOpen(false)}>Services</Link>
           <Link to="/#process" onClick={() => setMenuOpen(false)}>Process</Link>
           <Link to="/#work" onClick={() => setMenuOpen(false)}>Results</Link>
-          <Link className="nav-cta" to="/book-shaadi" onClick={() => setMenuOpen(false)}>Book a Shaadi</Link>
+          <Link className="nav-cta" to="/book-shaadi" onClick={() => setMenuOpen(false)}>Book Shaadi</Link>
         </nav>
         <button
           className="nav-toggle"

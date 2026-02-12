@@ -5,9 +5,9 @@ function Home() {
     <>
       <section className="hero">
         <div className="hero-content">
-          <h1>Bhagenge aap aur bachayenge hum</h1>
+          <h1>Aapka pyaar, hamari zimmedari.</h1>
           <p className="hero-sub">
-            We are a professional wedding planning team that takes complete responsibility for your journey-from planning every detail to flawlessly executing your wedding.
+            RunningShaadi.com is a wedding planning platform that helps couples plan private ceremonies, elope, and navigate the legal process of marriage with guidance and support.
           </p>
           <div className="hero-actions">
             <Link className="primary" to="/book-shaadi">Schedule your Shaadi</Link>
@@ -30,12 +30,12 @@ function Home() {
         <div className="hero-card">
           <div className="card-top">
             <h3>Service Snapshot</h3>
-            <p>Everything you need to make your wedding seamless and stress-free.</p>
+            <p>Everything you need to eloping safely</p>
           </div>
           <ul className="card-list">
             <li>Pickup service from home also for your partner</li>
             <li>Fully secured hotel rooms</li>
-            <li>Z+ protection from your Family mambers</li>
+            <li>Z+ Protection from Overprotective Family Members.</li>
             <li>Police And legal support</li>
             <li>Future Honey moon package</li>
           </ul>
@@ -58,7 +58,7 @@ function Home() {
           </article>
           <article>
             <h3>Protection</h3>
-            <p>We providing you Z+ protaction from your family mambers and also for you partner</p>
+            <p>We provide Z+ level protection from unexpected family drama, surprise visits, and overprotective relatives.</p>
           </article>
           <article>
             <h3>Police</h3>
