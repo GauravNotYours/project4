@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, Outlet, Route, Routes, useLocation } from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import ShaadiForm from './pages/ShaadiForm.jsx'
+import logo from './assets/logo.png'
 import './App.css'
 
 function SiteLayout() {
@@ -25,7 +26,7 @@ function SiteLayout() {
     <div className="page">
       <header className="nav">
         <Link className="brand" to="/">
-          <span className="brand-mark" aria-hidden="true">*</span>
+          <img className="brand-mark" src={logo} alt="RunningShaadi.com logo" />
           <span className="brand-name">RunningShaadi.com</span>
         </Link>
         <nav className={`nav-links ${menuOpen ? 'open' : ''}`}>
